@@ -1,0 +1,5 @@
+melp_testing:
+    resource: "@MelpTestingBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule hello/([^/]+) hello/index.php?name=$1 [L]

@@ -1,0 +1,13 @@
+RewriteEngine On
+
+php_value auto_prepend_file /home/gerard/work/perf-test/web-3/.init.php
+php_value auto_append_file  /home/gerard/work/perf-test/web-3/.deliver.php
+
+RewriteBase /
+
+# The rewrites can be written by the router component.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule hello/([^/]+)           melptesting/default/index.php?name=$1 [L]
+RewriteRule real/([^/]+)            melptesting/default/db.php?name=$1 [L]
+RewriteRule real-optim/([^/]+)      melptesting/default/db-optim.php?name=$1 [L]
+
