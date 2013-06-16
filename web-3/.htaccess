@@ -1,7 +1,11 @@
 RewriteEngine On
 
+# these paths are my local setup. Change to your own accordingly:
 php_value auto_prepend_file /home/gerard/work/perf-test/web-3/.init.php
 php_value auto_append_file  /home/gerard/work/perf-test/web-3/.deliver.php
+
+# php_value auto_prepend_file APP_ROOT/web-3/.init.php
+# php_value auto_append_file  APP_ROOT/web-3/.deliver.php
 
 RewriteBase /
 
